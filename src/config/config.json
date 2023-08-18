@@ -1,0 +1,181 @@
+{ "interface":
+  { "durationFadeOut":      5000,
+    "visibleSettings":      false,
+    "visibleInterface":     true,
+    "visibleVisuals":       false
+  },
+
+  "settings":
+  { "microphoneInput":      false,
+    "autoSensitivity":      true,
+    "sliderSen":
+    { "min":                0.1,
+      "max":                10,
+      "step":               0.1
+    },
+    "locationDetection":    false,
+    "partyMode":            false,
+    "projectionMode":       false,
+    "mapSettings":
+    { "token":              "pk.eyJ1IjoiZGFpdmQta2FpcGYiLCJhIjoiY2tvb21qamlzMGNtajJybnUwM2gwdGY1ZiJ9.aKH_sjgP0MYLTaGIWV_wPQ",
+      "style":              "mapbox://styles/mapbox/light-v10",
+      "zoomStart":          2,
+      "zoomSearch":         14,
+      "maxLat":             70,
+      "maxLng":             140,
+      "queryTerrain":       "https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2/tilequery/",
+      "queryStreets":       "https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/tilequery/",
+      "filterLineRoad":     ".json?radius=1000&limit=50&geometry=linestring&layers=road&access_token=",
+      "filterPolyBuilding": ".json?radius=1000&limit=50&geometry=polygon&layers=building&access_token=",
+      "filterPolyLand":     ".json?radius=1000&limit=50&geometry=polygon&layers=landuse&access_token=",
+      "filterPolyWater":    ".json?radius=1000&limit=50&dedupe&geometry=polygon&layers=water&access_token=",
+      "filterPolyContour":  ".json?radius=1000&limit=50&dedupe&geometry=polygon&layers=contour&access_token="
+    }
+
+  },
+
+  "geoDataMapping":
+  { "sunriseMinutes":       60,
+    "middayMinutes":        60,
+    "sunsetMinutes":        60,
+    "queryValMin":          0.01,
+    "queryValMax":          0.5,
+    "balancingWater":       50,
+    "visualsValMin":        0.01,
+    "visualsValMax":        1,
+    "updateDuration":       300000
+  },
+
+  "audioAnalyser":
+  { "waveFFT":              2048,
+    "barFFT":               32,
+    "minDifference":        60,
+    "reduceStep":           10,
+    "micSensitivity":       4,
+    "updateDuration":       4000,
+    "frequencyTopLimit":    240,
+    "frequencyLowLimit":    170,
+    "adjustStep":           0.1,
+    "min":                  0,
+    "max":                  255
+  },
+
+  "visuals":
+  { "camera":
+    { "fov":                75,
+      "near":               0.1,
+      "far":                1000,
+      "positionZ":          100
+    },
+
+    "updateDuration":       30000,
+
+    "colors":
+    { "hueRange":           360,
+      "dataMin":            0.01,
+      "dataMax":            1,
+      "maxSat":             100,
+      "maxLi":              100,
+      "colorLiMin":         20,
+      "colorLiMax":         70,
+      "startColor":         240
+    },
+
+    "effects":
+    { "dataMin":            0.01,
+      "dataMax":            1,
+      "minBlur":            0.8,
+      "maxBlur":            0.99
+    },
+
+    "sceneA":
+    { "maxAmount":          800,
+      "minAmount":          100,
+      "maxSize":            25,
+      "minSize":            8,
+      "spacingMax":         20,
+      "spacingMin":         3,
+      "theMoreTheLes":      -1,
+      "makePlane":          0.3,
+      "makeTriangle":       0.7,
+      "gridMinX":           -300,
+      "gidMaxX":            300,
+      "gridMinY":           -150,
+      "offset":             10,
+      "speed":              0.2,
+      "timer":              500,
+      "targetDegree":       45,
+      "sizeCircle":         15
+    },
+
+    "sceneB":
+    { "maxAmount":          400,
+      "minAmount":          20,
+      "maxSize":            15,
+      "minSize":            4,
+      "spacingMax":         40,
+      "spacingMin":         4,
+      "theMoreTheLes":      -1,
+      "speedAB":            0.2,
+      "speedC":             0.1,
+      "timer":              50,
+      "startDegreeB":       60,
+      "startDegreeC":       120,
+      "sizeFactor":
+      { "a":                15,
+        "b":                15,
+        "c":                30
+      },
+      "positionZ":
+      { "a":                10,
+        "b":                0,
+        "c":                -50
+      },
+      "speedRotate":
+      { "a":                0.03,
+        "b":                0.03,
+        "c":                0.02
+      },
+      "sizeCircle":
+      { "a":                10,
+        "b":                10,
+        "c":                50
+      }
+    },
+
+    "sceneC":
+    { "maxAmount":          1600,
+      "minAmount":          600,
+      "maxSize":            5,
+      "minSize":            3,
+      "maxProb":            0.4,
+      "minProb":            0.1,
+      "theMoreTheLes":      -1,
+      "makePlane":          0.3,
+      "makeTriangle":       0.7,
+      "timerRotation":      500,
+      "timerSwitch":        150,
+      "targetDegree":       90,
+      "startWindowX":       -200,
+      "endWindowX":         200,
+      "startWindowY":       -100
+    },
+
+    "sceneD":
+    { "maxAmount":          800,
+      "minAmount":          200,
+      "size":               3,
+      "maxDist":            80,
+      "minDist":            40,
+      "maxConnect":         8,
+      "minConnect":         2,
+      "maxOverall":         1500,
+      "minOverall":         100,
+      "xyWindow":           500,
+      "zWindow":            200,
+      "timer":              150,
+      "boxPositionZ":       -80
+    }
+  }
+
+}

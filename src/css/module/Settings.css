@@ -1,0 +1,206 @@
+.sidebar{
+    height:     100%;
+    width:      0;
+    background: #ffffff;
+    z-index:    40;
+    position:   absolute;
+    right:      0;
+    overflow-x: hidden;
+
+    display:                grid;
+    grid-template-columns:  10px 50px auto 50px 10px;
+    grid-template-rows:     repeat(6, 48px) 68px repeat(5, 48px) 88px repeat(2, 48px) auto;
+
+    filter:                 drop-shadow(-3px 0 6px rgba(0,0,0,0.2) );
+    transition:             0.5s;
+}
+
+#open{
+    width: 350px;
+}
+
+
+/* Icons */
+#closeIcon{
+    grid-column:    4 / 5;
+    grid-row:       1 / 2;
+    justify-self:   end;
+    align-self:     center;
+    transition:     fill 200ms;
+}
+
+.iconLow, .iconHigh, #closeIcon{
+    width:          24px;
+    height:         24px;
+}
+
+.iconLow{
+    grid-column:    2 / 3;
+    grid-row:       6 / 7;
+    align-self:     center;
+    justify-self:   center;
+}
+
+.iconHigh{
+    grid-column:    4 / 5;
+    grid-row:       6 / 7;
+    align-self:     center;
+    justify-self:   center;
+}
+
+#closeIcon:hover{
+    fill: #E41A43;
+}
+
+
+/* Setup Container */
+.sidebar h4{
+    grid-column:    2 / 5;
+    grid-row:       2 / 3;
+    align-self:     end;
+    font-size:      37px;
+}
+
+.sidebar h5{
+    grid-column:    2 / 5;
+    align-self:     end;
+}
+
+.switchContainer{
+    height:         30px;
+    width:          100%;
+    align-self:     center;
+    grid-column:    2 / 5;
+    grid-row:       4 / 5;
+}
+
+.sliderContainer{
+    width:          100%;
+    position:       relative;
+    grid-column:    3 / 4;
+    align-self:     center;
+}
+
+
+.locationMap{
+    width:          330px;
+    height:         192px;
+
+    grid-column:    2 / 5;
+    grid-row:       9 / 13;
+
+    border:         2px solid #E41A43;
+}
+
+#locationSet{
+    border:         2px solid black;
+}
+
+.hideMap{
+    width:          350px;
+    height:         190px;
+    grid-column:    1 / 6;
+    grid-row:       9 / 13;
+
+    z-index:        100;
+
+}
+
+.buttonSetLocation{
+    grid-column:    3 / 5;
+    grid-row:       12 / 13;
+    align-self:     end;
+    justify-self:   end;
+    z-index:        90;
+}
+
+
+/* Position of each element */
+#catAudio{
+    grid-row: 3 / 4;
+}
+
+#micSwitch{
+    grid-row: 4 / 5;
+}
+
+#senSwitch{
+    grid-row: 5 / 6;
+}
+
+#senSlider{
+    grid-row: 6 / 7;
+}
+
+#catGeodata{
+    grid-row: 7 / 8;
+}
+
+#geoSwitch{
+    grid-row: 8 / 9;
+}
+
+#geoInput{
+    grid-row: 9 / 10;
+}
+
+#catVisuals{
+    grid-row: 13 / 14;
+}
+
+#partySwitch{
+    grid-row: 14 / 15;
+}
+
+#prjSwitch{
+    grid-row: 15 /16;
+}
+
+.legal{
+    grid-column:    3 / 4;
+    grid-row:       16 /17;
+    justify-self:   center;
+    align-self:     end;
+}
+
+@media (max-width: 600px) {
+    #open{
+        width:      100%;
+    }
+
+    .sidebar{
+        grid-template-columns:  auto 50px 230px 50px auto;
+        grid-template-rows:     repeat(6, 40px) 50px repeat(4, 40px) 70px 80px repeat(4, 40px) auto;
+    }
+
+    .sidebar h4{
+        grid-column:    1 / 6;
+        font-size:      30px;
+        margin-left:    10px;
+    }
+
+    .sidebar h5{
+        font-size:      24px;
+    }
+
+    #closeIcon{
+        grid-column:    4 / 6;
+        margin-right:   10px;
+    }
+
+    .legal{
+        grid-column:    3 / 4;
+        grid-row:       17 / 18;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

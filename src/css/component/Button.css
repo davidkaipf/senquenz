@@ -1,0 +1,30 @@
+button{
+    width:          130px;
+    height:         33px;
+    padding:        2px;
+    margin:         5px;
+    border-radius:  18px;
+    font-size:      12px;
+    border:         none;
+    color:          white;
+    background:     #E41A43;
+}
+
+button:disabled{
+    background:     #D6D6D6;
+}
+
+button:hover{
+    opacity:        0.8;
+}
+
+button:active{
+    background:     #820E25;
+}
+
+button:focus{
+    background:     #D6D6D6;
+}
+
+
+
