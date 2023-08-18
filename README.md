@@ -1,5 +1,4 @@
-# Senquenz
-https://senquenz.de/
+# Senquenz - 08.2021
 
 Senquenz is a location-based real-time music visualizer. It accesses the user's microphone and performs a frequency analysis on the received audio signal. The obtained data is used to control parameters such as speed and direction of movement in the application. The specialty of Senquenz is the additional access to the location of the user. Thanks to a location analysis with data from the Mapbox Tilequery API, it can detect how many buildings, bodies of water, roads, and mountains are in the vicinity. Together with the current position of the sun, the resulting parameters determine the appearance of the visuals. They influence the shape, color, size, and spacing. In the end, the user is presented with a unique and tailored experience.
 
